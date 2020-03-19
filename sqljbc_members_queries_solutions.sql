@@ -7,3 +7,12 @@ select * from members
 	order by salary desc;
  select * from members
 	where first_name like 's%';
+select role, count(*)
+	from members
+    group by role;
+   select role, count(*)
+	from members
+    where role NOT LIKE 'm%'
+       group by role
+       order by role asc;
+
